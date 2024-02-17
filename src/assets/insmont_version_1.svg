@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 255.45 209.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名的渐变_51);
+        opacity: .1;
+      }
+
+      .cls-2 {
+        fill: url(#_未命名的渐变_110);
+      }
+
+      .cls-3 {
+        fill: url(#_未命名的渐变_77);
+      }
+
+      .cls-4 {
+        fill: url(#_未命名的渐变_100);
+      }
+
+      .cls-5 {
+        fill: url(#_未命名的渐变_67);
+      }
+
+      .cls-6 {
+        fill: url(#_未命名的渐变_52);
+      }
+    </style>
+    <linearGradient id="_未命名的渐变_51" data-name="未命名的渐变 51" x1="97.01" y1=".1" x2="99.64" y2=".1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0c3975"/>
+      <stop offset=".48" stop-color="#08559a"/>
+      <stop offset="1" stop-color="#066ab6"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_52" data-name="未命名的渐变 52" x1="169.32" y1="117.75" x2="255.45" y2="117.75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6455cb"/>
+      <stop offset="1" stop-color="#7c8cd9"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_100" data-name="未命名的渐变 100" x1="0" y1="47.23" x2="43.46" y2="47.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c24378"/>
+      <stop offset="1" stop-color="#c24378"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_110" data-name="未命名的渐变 110" x1="2.2" y1="134.24" x2="88.32" y2="134.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7b35a"/>
+      <stop offset="1" stop-color="#f7b35a"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_67" data-name="未命名的渐变 67" x1="110.88" y1="117.55" x2="197.01" y2="117.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6455cb"/>
+      <stop offset="1" stop-color="#7c8cd9"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_77" data-name="未命名的渐变 77" x1="51.39" y1="117.55" x2="137.52" y2="117.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6455cb"/>
+      <stop offset="1" stop-color="#7c8cd9"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="m97.37.2c-.12-.07-.24-.13-.36-.2h2.63c-.75.03-1.5.1-2.27.2Z"/>
+  <g>
+    <path class="cls-6" d="m251.63,71.72c-8.07-20.5-18.14-31.06-34.53-37.5-14.89-5.86-41.47-8.07-47.78-8.52v43.32c4.33-.39,18.12-1.26,29.44,2.35,5.8,1.85,9.63,6.1,12.11,10.36,2.87,4.94,4.24,10.62,4.24,16.34v111.73s40.34,0,40.34,0v-110.22c0-3.11-.15-6.22-.46-9.31-.84-8.39-1.94-14.96-3.35-18.55Z"/>
+    <circle class="cls-4" cx="21.73" cy="47.23" r="21.73"/>
+    <path class="cls-2" d="m70.47,167.94c-4.45-.27-8.76-1.62-12.55-3.93l-1.81-1.1c-2.99-1.82-5.59-4.21-7.65-7.02-3.3-4.5-5.07-9.9-5.07-15.44V60.03c-3.54,8.33-11.91,14.18-21.68,14.18-8.13,0-15.3-4.06-19.51-10.22v74.55c0,8.33,1.66,16.58,4.88,24.28l.95,2.27c3.16,7.56,7.77,14.45,13.57,20.31l1.26,1.28c6.42,6.48,14.18,11.56,22.75,14.89l5.14,2c5.57,2.17,11.43,3.57,17.39,4.16l3.78.38c2.2.22,4.4.33,6.61.33h9.79v-39.42l-17.85-1.08Z"/>
+    <path class="cls-5" d="m193.19,71.52c-8.07-20.5-18.14-31.06-34.53-37.5-14.89-5.86-41.47-8.07-47.78-8.52v43.32c4.33-.39,18.12-1.26,29.44,2.35,5.8,1.85,9.63,6.1,12.11,10.36,2.87,4.94,4.24,10.62,4.24,16.34v111.73s40.34,0,40.34,0v-110.22c0-3.11-.15-6.22-.46-9.31-.84-8.39-1.94-14.96-3.35-18.55Z"/>
+    <path class="cls-3" d="m133.7,71.52c-8.07-20.5-18.14-31.06-34.53-37.5-14.89-5.86-41.47-8.07-47.78-8.52v43.32c4.33-.39,18.12-1.26,29.44,2.35,5.8,1.85,9.63,6.1,12.11,10.36,2.87,4.94,4.24,10.62,4.24,16.34v111.73s40.34,0,40.34,0v-110.22c0-3.11-.15-6.22-.46-9.31-.84-8.39-1.94-14.96-3.35-18.55Z"/>
+  </g>
+</svg>

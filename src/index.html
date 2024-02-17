@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" insmont 是一个面向年轻用户的即时社交媒体平台，旨在帮助用户记录和分享生活中的重要时刻，捕捉和表达令人难忘的瞬间和情感。">
+    <link rel="short icon" href="assets/favicon.ico">
+    <script src="tailwindcss.js"></script>
+    <title>insmont | (✿◡‿◡)</title>
+</head>
+
+<body>
+
+    <div class="bg-white dark:bg-slate-900 pt-6 sm:pt-8 lg:pt-12" id="preview_banner">
+        <!-- banner - start -->
+        <div class="mx-auto max-w-screen-2xl px-4 pb-4 md:px-8">
+            <div
+                class="relative flex flex-wrap rounded-lg bg-indigo-500 px-4 py-3 shadow-lg sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+                <div
+                    class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-white sm:order-none sm:mb-0 sm:w-auto md:text-base">
+                    页面功能目前处于预览阶段，随着我们不断完善它们，某些细节可能会发生变化。</div>
+
+                <a href="https://github.com/insmont"
+                    class="order-last inline-block w-full whitespace-nowrap rounded-lg bg-indigo-600 px-4 py-2 text-center text-xs font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-700 focus-visible:ring active:bg-indigo-800 sm:order-none sm:w-auto md:text-sm">了解更多</a>
+            </div>
+        </div>
+        <!-- banner - end -->
+    </div>
+
+    <div class="bg-white dark:bg-slate-900 lg:pb-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <header class="flex items-center justify-between py-4 md:py-8">
+                <!-- logo - start -->
+                <a href="/" class="text-black-800 inline-flex items-center gap-2.5 text-2xl font-bold md:text-3xl"
+                    aria-label="logo">
+                    <img src="assets/insmont_version_1.svg" style="height: 45px;">
+                </a>
+
+                <!-- buttons - start -->
+                <div class=" flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
+
+                    <button id="theme-toggle" type="button"
+                        class=" self-center border border-gray-300 bg-gray-100 dark:border-gray-600  dark:bg-gray-700 text-gray-600 mr-3 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-3xl p-3">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <a href="https://insmont.org" target="_parent" id="states-button"
+                        class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-500 bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                        type="button">
+                        <svg aria-hidden="true" class="h-3 mr-2" viewBox="0 0 15 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="14" height="12" rx="2" fill="white" />
+                            <mask id="mask0_12694_49953" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="15" height="12">
+                                <rect x="0.5" width="14" height="12" rx="2" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_12694_49953)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.5 0H0.5V0.8H14.5V0ZM14.5 1.6H0.5V2.4H14.5V1.6ZM0.5 3.2H14.5V4H0.5V3.2ZM14.5 4.8H0.5V5.6H14.5V4.8ZM0.5 6.4H14.5V7.2H0.5V6.4ZM14.5 8H0.5V8.8H14.5V8ZM0.5 9.6H14.5V10.4H0.5V9.6ZM14.5 11.2H0.5V12H14.5V11.2Z"
+                                    fill="#D02F44" />
+                                <rect x="0.5" width="6" height="5.6" fill="#46467F" />
+                                <g filter="url(#filter0_d_12694_49953)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.83317 1.20005C1.83317 1.42096 1.68393 1.60005 1.49984 1.60005C1.31574 1.60005 1.1665 1.42096 1.1665 1.20005C1.1665 0.979135 1.31574 0.800049 1.49984 0.800049C1.68393 0.800049 1.83317 0.979135 1.83317 1.20005ZM3.1665 1.20005C3.1665 1.42096 3.01727 1.60005 2.83317 1.60005C2.64908 1.60005 2.49984 1.42096 2.49984 1.20005C2.49984 0.979135 2.64908 0.800049 2.83317 0.800049C3.01727 0.800049 3.1665 0.979135 3.1665 1.20005ZM4.1665 1.60005C4.3506 1.60005 4.49984 1.42096 4.49984 1.20005C4.49984 0.979135 4.3506 0.800049 4.1665 0.800049C3.98241 0.800049 3.83317 0.979135 3.83317 1.20005C3.83317 1.42096 3.98241 1.60005 4.1665 1.60005ZM5.83317 1.20005C5.83317 1.42096 5.68393 1.60005 5.49984 1.60005C5.31574 1.60005 5.1665 1.42096 5.1665 1.20005C5.1665 0.979135 5.31574 0.800049 5.49984 0.800049C5.68393 0.800049 5.83317 0.979135 5.83317 1.20005ZM2.1665 2.40005C2.3506 2.40005 2.49984 2.22096 2.49984 2.00005C2.49984 1.77913 2.3506 1.60005 2.1665 1.60005C1.98241 1.60005 1.83317 1.77913 1.83317 2.00005C1.83317 2.22096 1.98241 2.40005 2.1665 2.40005ZM3.83317 2.00005C3.83317 2.22096 3.68393 2.40005 3.49984 2.40005C3.31574 2.40005 3.1665 2.22096 3.1665 2.00005C3.1665 1.77913 3.31574 1.60005 3.49984 1.60005C3.68393 1.60005 3.83317 1.77913 3.83317 2.00005ZM4.83317 2.40005C5.01726 2.40005 5.1665 2.22096 5.1665 2.00005C5.1665 1.77913 5.01726 1.60005 4.83317 1.60005C4.64908 1.60005 4.49984 1.77913 4.49984 2.00005C4.49984 2.22096 4.64908 2.40005 4.83317 2.40005ZM5.83317 2.80005C5.83317 3.02096 5.68393 3.20005 5.49984 3.20005C5.31574 3.20005 5.1665 3.02096 5.1665 2.80005C5.1665 2.57914 5.31574 2.40005 5.49984 2.40005C5.68393 2.40005 5.83317 2.57914 5.83317 2.80005ZM4.1665 3.20005C4.3506 3.20005 4.49984 3.02096 4.49984 2.80005C4.49984 2.57914 4.3506 2.40005 4.1665 2.40005C3.98241 2.40005 3.83317 2.57914 3.83317 2.80005C3.83317 3.02096 3.98241 3.20005 4.1665 3.20005ZM3.1665 2.80005C3.1665 3.02096 3.01727 3.20005 2.83317 3.20005C2.64908 3.20005 2.49984 3.02096 2.49984 2.80005C2.49984 2.57914 2.64908 2.40005 2.83317 2.40005C3.01727 2.40005 3.1665 2.57914 3.1665 2.80005ZM1.49984 3.20005C1.68393 3.20005 1.83317 3.02096 1.83317 2.80005C1.83317 2.57914 1.68393 2.40005 1.49984 2.40005C1.31574 2.40005 1.1665 2.57914 1.1665 2.80005C1.1665 3.02096 1.31574 3.20005 1.49984 3.20005ZM2.49984 3.60005C2.49984 3.82096 2.3506 4.00005 2.1665 4.00005C1.98241 4.00005 1.83317 3.82096 1.83317 3.60005C1.83317 3.37913 1.98241 3.20005 2.1665 3.20005C2.3506 3.20005 2.49984 3.37913 2.49984 3.60005ZM3.49984 4.00005C3.68393 4.00005 3.83317 3.82096 3.83317 3.60005C3.83317 3.37913 3.68393 3.20005 3.49984 3.20005C3.31574 3.20005 3.1665 3.37913 3.1665 3.60005C3.1665 3.82096 3.31574 4.00005 3.49984 4.00005ZM5.1665 3.60005C5.1665 3.82096 5.01726 4.00005 4.83317 4.00005C4.64908 4.00005 4.49984 3.82096 4.49984 3.60005C4.49984 3.37913 4.64908 3.20005 4.83317 3.20005C5.01726 3.20005 5.1665 3.37913 5.1665 3.60005ZM5.49984 4.80005C5.68393 4.80005 5.83317 4.62096 5.83317 4.40005C5.83317 4.17913 5.68393 4.00005 5.49984 4.00005C5.31574 4.00005 5.1665 4.17913 5.1665 4.40005C5.1665 4.62096 5.31574 4.80005 5.49984 4.80005ZM4.49984 4.40005C4.49984 4.62096 4.3506 4.80005 4.1665 4.80005C3.98241 4.80005 3.83317 4.62096 3.83317 4.40005C3.83317 4.17913 3.98241 4.00005 4.1665 4.00005C4.3506 4.00005 4.49984 4.17913 4.49984 4.40005ZM2.83317 4.80005C3.01727 4.80005 3.1665 4.62096 3.1665 4.40005C3.1665 4.17913 3.01727 4.00005 2.83317 4.00005C2.64908 4.00005 2.49984 4.17913 2.49984 4.40005C2.49984 4.62096 2.64908 4.80005 2.83317 4.80005ZM1.83317 4.40005C1.83317 4.62096 1.68393 4.80005 1.49984 4.80005C1.31574 4.80005 1.1665 4.62096 1.1665 4.40005C1.1665 4.17913 1.31574 4.00005 1.49984 4.00005C1.68393 4.00005 1.83317 4.17913 1.83317 4.40005Z"
+                                        fill="url(#paint0_linear_12694_49953)" />
+                                </g>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_12694_49953" x="1.1665" y="0.800049" width="4.6665" height="5"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_12694_49953" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_12694_49953"
+                                        result="shape" />
+                                </filter>
+                                <linearGradient id="paint0_linear_12694_49953" x1="1.1665" y1="0.800049" x2="1.1665"
+                                    y2="4.80005" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="1" stop-color="#F0F0F0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        English</svg>
+                    </a>
+                </div>
+                <!-- buttons - end -->
+            </header>
+        </div>
+    </div>
+
+
+    <div class="bg-white dark:bg-slate-900 pb-6 sm:pb-8 lg:pb-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+
+            <section class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
+                <!-- content - start -->
+                <div class="flex flex-col justify-between xl:w-5/12">
+                    <div></div>
+
+                    <div class="sm:text-center lg:py-12 lg:text-left xl:py-24">
+
+                        <h1 class="mb-4 text-4xl font-bold text-black dark:text-white sm:text-5xl md:text-6xl">加入 <span
+                                class="text-indigo-600 dark:text-purple">insmont</span> ，
+                        </h1>
+                        <h2 class="mb-8 text-4xl font-bold text-black dark:text-white sm:text-6xl md:mb-12 md:text-6xl">
+                            记录你的精彩生活！
+                        </h2>
+
+                        <div class="flex gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
+                            <a href="login.html"
+                                class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">登录</a>
+
+                            <a href="register.html"
+                                class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">注册</a>
+                        </div>
+                    </div>
+
+                    <!-- social - start -->
+                    <div class="mt-8 flex items-center justify-center gap-4 sm:mt-16 lg:justify-start">
+                        <span
+                            class="text-sm font-semibold uppercase tracking-widest text-gray-400 sm:text-base">关注我们</span>
+                        <span class="h-px w-12 bg-gray-200"></span>
+
+                        <div class="flex gap-4">
+                            <a href="https://github.com/insmont" target="_blank"
+                                class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                                <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- social - end -->
+                </div>
+                <!-- content - end -->
+
+                <!-- image - start -->
+                <div class="h-48 overflow-hidden rounded-lg lg:h-auto xl:w-5/12">
+                    <img src="assets/insmont_version_1.svg" loading="lazy" alt="insmont icon" class="h-80 w-full" />
+                </div>
+                <!-- image - end -->
+            </section>
+        </div>
+    </div>
+
+    <div class="bg-white dark:bg-slate-900 py-6 sm:py-8 lg:py-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <!-- text - start -->
+            <div class="mb-10 md:mb-16">
+                <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 dark:text-white md:mb-6 lg:text-3xl">
+                    捕捉、分享你的美好瞬间，展现出你独特的魅力</h2>
+
+                <p class="mx-auto max-w-screen-md text-center dark:text-slate-400 text-gray-500 md:text-lg">
+                    引人注目的社交应用，持续增长的用户群体，安全端到端加密，完整的云服务，快速体验，全局暗黑模式，优质客户支持。</p>
+            </div>
+            <!-- text - end -->
+
+            <div class="grid gap-12 sm:grid-cols-2 xl:grid-cols-3 xl:gap-16">
+                <!-- feature - start -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mb-2 text-center text-lg dark:text-white font-semibold md:text-xl">持续增长的用户群体</h3>
+                    <p class="mb-2 text-center text-gray-500">吸引大量新用户并有效地留住现有用户，实现用户数量的持续增长。</p>
+                </div>
+                <!-- feature - end -->
+
+                <!-- feature - start -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mb-2 text-center text-lg dark:text-white font-semibold md:text-xl">安全端到端加密</h3>
+                    <p class="mb-2 text-center text-gray-500">采用高级加密技术，确保用户数据在传输和存储过程中得到完善的保护，防止数据泄露。</p>
+                </div>
+                <!-- feature - end -->
+
+                <!-- feature - start -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mb-2 text-center text-lg dark:text-white font-semibold md:text-xl">别具一格的云服务</h3>
+                    <p class="mb-2 text-center text-gray-500">提供全面的云服务架构，包括高可用性、弹性扩展等，确保应用稳定运行和灵活性。</p>
+                </div>
+                <!-- feature - end -->
+
+                <!-- feature - start -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mb-2 text-center text-lg dark:text-white font-semibold md:text-xl">“唰”的一下就好了</h3>
+                    <p class="mb-2 text-center text-gray-500">优化技术和设计，确保应用具有快速响应和流畅的用户界面，提供出色的使用体验。</p>
+                </div>
+                <!-- feature - end -->
+
+                <!-- feature - start -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mb-2 text-center text-lg dark:text-white font-semibold md:text-xl">卓越的服务支持</h3>
+                    <p class="mb-2 text-center text-gray-500">
+                        出色的客户支持，包括即时回应用户反馈和问题，提供详细的用户帮助中心和FAQ。专业的客服团队将全程陪伴，确保用户体验始终如一地优质和满意。
+                    </p>
+                </div>
+                <!-- feature - end -->
+
+                <!-- feature - start -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="mb-2 flex h-12 w-12 items-center justify-center text-indigo-500 sm:mb-4 md:h-14 md:w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="mb-2 text-center text-lg dark:text-white font-semibold md:text-xl">全局暗黑模式</h3>
+                    <p class="mb-2 text-center text-gray-500">提供舒适的视觉体验，在夜间或低光环境下使用应用更加方便和愉悦。</p>
+                </div>
+                <!-- feature - end -->
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white dark:bg-slate-900 py-6 sm:py-8 lg:py-12">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <div
+                class="flex flex-col items-center rounded-lg bg-gray-100 dark:bg-slate-800 p-4 sm:p-8 lg:flex-row lg:justify-between">
+                <div class="mb-4 sm:mb-8 lg:mb-0">
+                    <h2 class="text-center text-xl font-bold text-indigo-500 sm:text-2xl lg:text-left lg:text-3xl">
+                        获取更新通知</h2>
+                    <p class="text-center text-gray-500 dark:text-slate-400 lg:text-left">
+                        输入您的邮箱，第一时间获取&nbsp;Insmont&nbsp;的更新！</p>
+                </div>
+
+                <div class="flex flex-col items-center lg:items-end">
+                    <form class="mb-3 flex w-full max-w-md gap-2">
+                        <input placeholder="邮箱地址" id="user_email"
+                            class="bg-gray-white w-full flex-1 rounded border border-gray-300 px-3 py-2 text-gray-800 placeholder-gray-400 outline-none ring-indigo-300 transition duration-100 focus:ring" />
+
+                        <button id="subscribeButton" onclick="return false;" class="pointer-events-none bg-gray-300 dark:bg-slate-500 inline-block rounded  px-8 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 
+                        md:text-base">订阅</button>
+
+                        <div id="loadingButton"
+                            class="hidden px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent cursor-not-allowed
+                            bg-indigo-700 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                            <span
+                                class="animate-spin inline-block size-4 border-[3px] border-current border-t-transparent text-white rounded-full"
+                                role="status" aria-label="loading"></span>
+                            加载中
+                        </div>
+                    </form>
+
+                    <p class="text-center text-xs text-gray-400 lg:text-right">订阅我们的更新通知表示您同意我们的 <a href="#"
+                            class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600">服务协议</a>
+                        及 <a href="#"
+                            class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600">隐私政策</a>。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div id="hs-subscription-with-image"
+        class="hs-overlay hidden fixed inset-0 z-[80] flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800 w-full max-w-md mx-auto">
+
+            <div class="p-4 sm:p-10 text-center overflow-y-auto">
+                <h3 id="topTitle" class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    订阅成功 🎉
+                </h3>
+                <p id="contentView" class="text-gray-500">
+                    感谢您的订阅。 我们更新时，您将第一时间收到通知。
+                </p>
+
+                <div class="mt-6 flex justify-center gap-x-4">
+                    <button type="button"
+                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-hs-overlay="#hs-subscription-with-image">
+                        明白
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <div class="bg-white dark:bg-slate-900 pt-4 sm:pt-10 lg:pt-12">
+        <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+            <div class="flex flex-col items-center justify-between gap-4 border-t border-b py-6 md:flex-row">
+                <!-- nav - start -->
+                <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
+                    <a href="https://github.com/Insmont"
+                        class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">关于</a>
+                </nav>
+                <!-- nav - end -->
+
+                <!-- social - start -->
+                <div class="flex gap-4">
+
+                    <a href="https://github.com/insmont" target="_blank"
+                        class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                        <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- social - end -->
+            </div>
+
+            <div class="py-8 text-center text-sm text-gray-400">© 2023 - <span id="year">Present</span> Insmont. All
+                rights reserved.&nbsp;<a href="https://beian.miit.gov.cn" target="_blank"> 苏ICP备20015498号-3</a></div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
