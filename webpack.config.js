@@ -26,6 +26,9 @@ module.exports = {
         extractComments: false,
       }),
     ],
+    splitChunks: {
+      chunks: "all",
+    },
   },
   entry: glob.sync("./src/**/*.ts").reduce((acc, path) => {
     const entry = path.replace("./src/", "").replace(".ts", "");
@@ -67,11 +70,6 @@ module.exports = {
         { from: "src/assets", to: "assets" }
       ],
     }),
-    // new HtmlWebpackPlugin({
-    //   template: "./src/index.html",
-    //   filename: "index.html",
-    //   chunks: ["index"],
-    // }),
   ],
   output: {
     filename: "[name].js",

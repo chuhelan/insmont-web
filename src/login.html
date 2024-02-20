@@ -16,26 +16,28 @@
     <section class="flex flex-col md:flex-row h-screen items-center">
 
         <div class="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
-            <img src="https://source.unsplash.com/random" alt="" class="w-full h-full object-cover cursor-pointer" onclick="window.location.href='index.html'">
+            <img loading="lazy" src="https://source.unsplash.com/random" alt=""
+                class="w-full h-full object-cover cursor-pointer" onclick="window.location.href='index.html'">
         </div>
 
         <div class="bg-white dark:bg-slate-900 w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
         flex items-center justify-center">
 
             <div class="w-full h-100">
-                <img src="assets/insmont_version_1.svg" alt="insmont" class="w-16 h-16 md:w-22 md:h-22 mb-3 cursor-pointer" onclick="window.location.href='index.html'">
-                <form class="mt-6">
+                <img src="assets/insmont_version_1.svg" alt="insmont"
+                    class="w-16 h-16 md:w-22 md:h-22 mb-3 cursor-pointer" onclick="window.location.href='index.html'">
+                <form onclick="return false;" class="mt-6">
                     <div>
                         <label class="block text-gray-700 dark:text-white">手机号或邮箱地址</label>
-                        <input type="email" name="" id="" placeholder="emaple@emaple.com 或 138-8888-8888"
-                            class="w-full px-4 py-3 rounded-lg mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                            autofocus autocomplete required>
+                        <input type="text" id="inputKey" placeholder="emaple@emaple.com 或 138-8888-8888" class="w-full px-4 py-3 rounded-lg mt-2 border focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 
+                            dark:text-gray-400 dark:focus:ring-gray-600 focus:bg-white focus:outline-none" autofocus
+                            autocomplete required>
                     </div>
 
                     <div class="mt-4">
                         <label class="block text-gray-700 dark:text-white">密码</label>
-                        <input type="password" name="" id="" placeholder="输入密码" minlength="6" class="w-full px-4 py-3 rounded-lg mt-2 border focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600
-                focus:bg-white focus:outline-none" required>
+                        <input type="password" id="inputPassword" placeholder="输入密码" minlength="6" class="w-full px-4 py-3 rounded-lg mt-2 border focus:border-blue-500 dark:bg-slate-900 dark:border-gray-700 
+                        dark:text-gray-400 dark:focus:ring-gray-600 focus:bg-white focus:outline-none" required>
                     </div>
 
                     <div class="text-right mt-2">
@@ -43,24 +45,40 @@
                             class="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700 dark:text-white">忘记密码？</a>
                     </div>
 
-                    <button type="submit" class="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
+                    <button id="loginButton" type="submit" class="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">登&nbsp;录</button>
+
+                    <div id="loadingButton"
+                        class="hidden w-full font-semibold rounded-lg text-center px-4 py-3 mt-6 items-center gap-x-2 text-sm border border-transparent cursor-not-allowed
+                            bg-indigo-400 text-white disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                        <span
+                            class="animate-spin inline-block size-4 mr-2 justify-center border-[3px] border-current border-t-transparent text-white rounded-full"
+                            role="status" aria-label="loading"></span>
+                        加载中
+                    </div>
                 </form>
 
-                <hr class="my-6 border-gray-300 w-full">
+                <hr class="my-6 border-gray-30 dark:border-gray-500 w-full">
 
-                <button type="button" class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300 dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                <button id="login2faDialog" class="hidden" data-hs-overlay="#hs-cookies"></button>
+                <button type="button" data-hs-overlay="#hs-notifications"
+                    class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300 dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     <div class="flex items-center justify-center">
-                        <svg t="1708173271105" class="icon w-6 h-6" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1515" width="200" height="200"><path d="M510.603636 996.305455a197.818182 197.818182 0 0 1-106.705454-31.185455c-107.636364-69.003636-314.181818-266.123636-314.181818-354.676364V242.618182c0-55.621818 68.305455-106.705455 215.04-160.698182a2050.56 2050.56 0 0 1 198.981818-60.741818l6.865454-1.629091 6.865455 1.629091A2050.56 2050.56 0 0 1 716.567273 81.454545c146.734545 53.992727 215.04 104.727273 215.04 160.698182v368.290909c0 88.552727-206.778182 285.789091-314.181818 354.676364a197.818182 197.818182 0 0 1-106.821819 31.185455z m0-916.945455c-194.094545 47.941818-362.821818 123.694545-362.821818 162.909091v368.174545c0 46.545455 160.581818 224.465455 287.534546 305.687273a139.636364 139.636364 0 0 0 150.690909 0c126.952727-81.454545 287.534545-259.607273 287.534545-305.687273V242.618182c-0.116364-39.563636-168.843636-115.316364-362.938182-163.258182z" fill="#004198" p-id="1516"></path><path d="M510.603636 508.392727H118.574545V207.476364L510.603636 49.454545v458.938182zM880.756364 666.065455L709.818182 849.454545 510.603636 974.545455V508.392727h370.152728v157.672728z" fill="#004198" p-id="1517"></path></svg>
-                        <a href="login-with-code.html"><span class="ml-4">
-                                使用验证码登录</span></a>
+                        <svg fill="currentColor" class="icon fill-green-600 w-6 h-6" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z">
+                            </path>
+                        </svg>
+                        <span class="ml-4">
+                            使用验证码登录
+                        </span>
                     </div>
                 </button>
 
-                <p class="mt-8 mb-28 dark:text-white" >还没有账号吗？
+                <p class="mt-8 mb-28 dark:text-white">还没有账号吗？
                     <a href="register.html" class="text-blue-500 hover:text-blue-700 font-semibold">立即注册</a>
                 </p>
-
 
                 <div class="flex justify-center text-gray-400">
                     <p>© 2023 - <span id="year">20XX</span> insmont. All rights reserved.</p>
@@ -70,6 +88,225 @@
         </div>
 
     </section>
+
+    <div id="hs-subscription-with-image"
+        class="hs-overlay hidden fixed inset-0 z-[80] flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800 w-full max-w-md mx-auto">
+
+            <div class="p-4 sm:p-10 text-center overflow-y-auto">
+                <h3 id="topTitle" class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    通知标题
+                </h3>
+                <p id="contentView" class="text-gray-500">
+                    通知内容
+                </p>
+
+                <div class="mt-6 flex justify-center gap-x-4">
+                    <button type="button"
+                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-hs-overlay="#hs-subscription-with-image">
+                        明白
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="hs-cookies"
+        class="hs-overlay hidden size-full fixed items-center justify-center top-0 start-0 z-[8] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800">
+                <div class="p-5 sm:pt-14 sm:pl-14 sm:pr-14 sm:pb-8 text-center overflow-y-auto">
+
+                    <img src="assets/insmont_version_1.svg" alt="insmont" class="w-10 h-10 md:w-14 md:h-14 mb-8">
+
+                    <h3 class="mb-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
+                        验证身份
+                    </h3>
+                    <p class="text-gray-500">
+                        我们无法识别此设备。为了保护您的账户安全，Insmont 希望确认是您本人在登录。<a target="_blank" href="privacy-policy.html"
+                            class="font-medium text-blue-600 hover:underline dark:text-blue-500">了解详情</a>
+                    </p>
+                </div>
+
+
+                <div class="px-6 md:px-16 mt-6 mb-16 ">
+
+                    <label
+                        class="block mb-4 text-sm font-medium text-gray-900 dark:text-white">请确认您的手机号或电子邮箱以接收验证码</label>
+                    <div class="flex">
+                        <input type="text" id="2faKey" aria-describedby="helper-text-explanation" disabled
+                            class="pointer-events-none opacity-50 disa mr-4 bg-gray-50 border border-gray-700 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="name@insmont.org 或 1xx-xxxx-xxxx">
+                        <button type="button" id="2faSendButton"
+                            class="inline-flex items-center justify-center px-7 py-1 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            style="width: 100px; height: 40px;">
+                            <span id="2faSend"
+                                class="items-center flex justify-center text-xs font-semibold text-white">
+                                发&nbsp;送
+                            </span>
+                            <span id="2faCount"
+                                class="hidden items-center justify-center ms-2 text-xl font-semibold text-white">
+                                60
+                            </span>
+                        </button>
+                    </div>
+                    <label class="block mb-4 text-sm mt-8 font-medium text-gray-900 dark:text-white">输入验证码：</label>
+                    <div class="flex space-x-3 justify-evenly  mx-auto" data-hs-pin-input id="2faCode">
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                    </div>
+
+                    <p id="helper-text-explanation" class="mt-5 text-sm text-gray-500 dark:text-gray-400">Insmont
+                        不会以任何方式泄露您的账户信息，有效期5分钟</p>
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button type="button" onclick="return false;" id="2faVerifyButton" class="h-16 rounded-b-xl w-full py-3 px-4 inline-flex justify-center 
+                        items-center gap-x-2 text-sm font-semibold rounded-ee-xl border border-transparent
+                        pointer-events-none bg-gray-300 text-gray-600 dark:bg-slate-500 dark:text-gray-300">
+                        <span class="text-xl">验&nbsp;&nbsp;证</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingDialog"
+        class="hs-overlay hidden fixed inset-0 z-[15] flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800 max-w-md mx-auto">
+            <div
+                class="flex items-center justify-center w-32 h-32 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                <div role="status">
+                    <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor" />
+                        <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill" />
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="verifyWithCode"
+        class="hs-overlay hidden size-full fixed items-center justify-center top-0 start-0 z-[8] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+
+        </div>
+    </div>
+
+
+    <div id="hs-notifications"
+        class="hs-overlay hidden size-full fixed top-0 start-0 z-[10] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div
+                class="relative flex flex-col bg-white border shadow-sm rounded-xl overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+                <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800">
+                    <div class="p-5 sm:pt-14 sm:pl-14 sm:pr-14 sm:pb-8 text-center overflow-y-auto">
+                        <div class="flex justify-between mb-8">
+                            <img src="assets/insmont_version_1.svg" alt="insmont" class="w-10 h-10 md:w-14 md:h-14 ">
+                            <button class="w-12 h-12  items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:hover:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-overlay="#hs-notifications">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="justify-center m-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                            </button>
+                        </div>
+                        <h3 class="mb-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
+                            验证码登录
+                        </h3>
+                        <p class="text-gray-500">
+                            为了方便您的登录并确保账户安全，Insmont 推荐您使用验证码登录方式。<a target="_blank" href="privacy-policy.html"
+                                class="font-medium text-blue-600 hover:underline dark:text-blue-500">了解详情</a>
+                        </p>
+                    </div>
+
+
+                    <div class="px-6 md:px-16 mt-6 mb-16 ">
+
+                        <label
+                            class="block mb-4 text-sm font-medium text-gray-900 dark:text-white">请输入您的手机号或电子邮箱以接收验证码</label>
+                        <div class="flex">
+                            <input type="text" id="verifyCodeInput" autofocus
+                                class=" opacity-50 disa mr-4 bg-gray-50 border border-gray-700 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="name@insmont.org 或 1xx-xxxx-xxxx">
+                            <button type="button" id="verifyCodeButton"
+                                class="inline-flex items-center justify-center px-7 py-1 text-sm font-medium text-center rounded-lg
+                                pointer-events-none bg-gray-300 text-gray-600 dark:bg-slate-500 dark:text-gray-300"
+                                style="width: 100px; height: 40px;">
+                                <span id="__2faSend"
+                                    class="items-center flex justify-center text-xs font-semibold text-white">
+                                    发&nbsp;送
+                                </span>
+                                <span id="__faCount"
+                                    class="hidden items-center justify-center ms-2 text-xl font-semibold text-white">
+                                    60
+                                </span>
+                            </button>
+                        </div>
+                        <label class="block mb-4 text-sm mt-8 font-medium text-gray-900 dark:text-white">输入验证码：</label>
+                        <div class="flex space-x-3 justify-evenly  mx-auto" data-hs-pin-input id="loginWithCodeInput">
+                            <input type="number"
+                                class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                data-hs-pin-input-item verificationCode>
+                            <input type="number"
+                                class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                data-hs-pin-input-item verificationCode>
+                            <input type="number"
+                                class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                data-hs-pin-input-item verificationCode>
+                            <input type="number"
+                                class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                data-hs-pin-input-item verificationCode>
+                            <input type="number"
+                                class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                data-hs-pin-input-item verificationCode>
+                            <input type="number"
+                                class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                data-hs-pin-input-item verificationCode>
+                        </div>
+
+                        <p id="helper-text-explanation" class="mt-5 text-sm text-gray-500 dark:text-gray-400">Insmont
+                            不会以任何方式泄露您的账户信息，有效期5分钟</p>
+                    </div>
+
+
+                    <div class="flex items-center ">
+                        <button type="button" onclick="return false;" id="loginCodeVerifyButton" class="h-16 rounded-b-xl w-full py-3 px-4 inline-flex justify-center 
+                            items-center gap-x-2 text-sm font-semibold rounded-ee-xl border border-transparent
+                            pointer-events-none bg-gray-300 text-gray-600 dark:bg-slate-500 dark:text-gray-300">
+                            <span class="text-xl">登&nbsp;&nbsp;录</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 </body>
 
