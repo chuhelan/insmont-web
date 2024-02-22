@@ -1,6 +1,6 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const glob = require("glob");
 
@@ -30,11 +30,13 @@ module.exports = {
       chunks: "all",
     },
   },
-  entry: glob.sync("./src/**/*.ts").reduce((acc, path) => {
-    const entry = path.replace("./src/", "").replace(".ts", "");
-    acc[entry] = path;
-    return acc;
-  }, {}),
+  entry: {
+    ...glob.sync("./src/pages/**/*.ts").reduce((acc, path) => {
+      const entryName = path.replace("./src/pages/", "").replace(".ts", "");
+      acc[entryName] = path;
+      return acc;
+    }, {}),
+  },
   mode: "production",
   devServer: {
     watchFiles: ["src/**/*"],
@@ -48,8 +50,16 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, "src"),
+        include: path.resolve(__dirname, "src/styles"),
         use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets',
+        },
       },
     ],
   },
@@ -57,14 +67,19 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
-    ...glob.sync("./src/**/*.html").map((path) => {
-      const filename = path.replace("./src/", "");
+    new HtmlWebpackPlugin({
+      template: "./src/pages/index.html",
+      filename: "index.html",
+      chunks: ["index"],
+  }),
+  ...glob.sync("./src/pages/*/index.html").map((path) => {
+      const folderName = path.replace(/^\.\/src\/pages\/(.*)\/index.html$/, "$1");
       return new HtmlWebpackPlugin({
-        template: path,
-        filename: filename,
-        chunks: [filename.replace(".html", "")],
+          template: path,
+          filename: `${folderName}/index.html`,
+          chunks: [`${folderName}/${folderName}`],
       });
-    }),
+  }),
     new CopyPlugin({
       patterns: [
         { from: "src/assets", to: "assets" }

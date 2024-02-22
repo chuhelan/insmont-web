@@ -1,4 +1,4 @@
-import { enableDarkMode } from './index';
+import { enableDarkMode } from '../index';
 import '/node_modules/preline/dist/preline.js';
 import axios, { CancelToken } from 'axios';
 import * as CryptoJS from 'crypto-js';
@@ -124,7 +124,7 @@ function loginRequest(user: User): void {
                     token: extractTokenAndUid(response.data.data.token).token
                 };
                 writeCookie(cookie);
-                window.location.href = "home.html";
+                window.location.href = "/home";
             } else if (response.data.code === 201) {
                 temp = user.key;
                 open2faDialog(user.key);
@@ -293,7 +293,7 @@ function verificationAccount(key: string, code: string): void {
                     token: extractTokenAndUid(response.data.data.token).token
                 };
                 writeCookie(cookie);
-                window.location.href = "home.html";
+                window.location.href = "/home";
             } else if (response.data.code >= 400 && response.data.code <= 404) {
                 showDialog("请重新尝试", "验证码错误");
                 const twoFaCode = document.querySelectorAll('[data-hs-pin-input-item]');
@@ -343,7 +343,7 @@ async function cookieVerifyAndJump(): Promise<void> {
 
     if (uid !== null && token !== null) {
         if (await verifyToken(uid, token)) {
-            window.location.href = "home.html";
+            window.location.href = "/home";
         }
     }
 }

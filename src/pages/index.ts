@@ -78,7 +78,7 @@ function subscribe(): void {
 
     const formData = new FormData();
     formData.append("email", input.value);
-    axios.post("http://localhost:2077/v1/subscribe", formData, {
+    axios.post("https://api.insmont.org.cn/v1/subscribe", formData, {
         timeout: 5000,
         cancelToken: source.token
     })

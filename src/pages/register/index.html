@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" insmont 是一个面向年轻用户的即时社交媒体平台，旨在帮助用户记录和分享生活中的重要时刻，捕捉和表达令人难忘的瞬间和情感。">
-    <link rel="short icon" href="assets/favicon.ico">
-    <script src="tailwindcss.js"></script>
+    <link rel="short icon" href="../assets/favicon.ico">
+    <script src="../tailwindcss.js"></script>
     <title>insmont 注册 | Hi~ o(*￣▽￣*)ブ</title>
 </head>
 
@@ -35,7 +35,7 @@
             <div class="flex flex-col items-center w-full pt-5 pr-4 pb-10 pl-4 lg:pt-10 lg:flex-row">
                 <div class="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
                     <div class="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
-                        <img src="assets/insmont_version_1.svg" alt="insmont" class="w-24 h-24 md:w-72 md:h-72 mb-3 cursor-pointer" onclick="window.location.href='index.html'" />
+                        <img src="../assets/insmont_version_1.svg" alt="insmont" class="w-24 h-24 md:w-72 md:h-72 mb-3 cursor-pointer" onclick="window.location.href='/'" />
                     </div>
                 </div>
                 <div class="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
@@ -48,7 +48,7 @@
                                     <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                                         已经有账号了么？
                                         <a class="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                            href="login.html">
+                                            href="/login">
                                             立即登录
                                         </a>
                                     </p>
@@ -60,11 +60,11 @@
                                         <div class="grid gap-y-4">
                                             <!-- Form Group -->
                                             <div>
-                                                <label for="email" class="block text-sm mb-2 dark:text-white">
+                                                <label for="email"  class="block text-sm mb-2 dark:text-white">
                                                     手机号或邮箱
                                                 </label>
                                                 <div class="relative">
-                                                    <input type="email" id="email" name="email" placeholder="输入您的手机号或邮箱"
+                                                    <input type="text" id="registerAccount"  placeholder="输入您的手机号或邮箱"
                                                         class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                                                         required aria-describedby="email-error">
                                                     <div
@@ -284,7 +284,7 @@
                                                 <div class="ms-3 ml-1">
                                                     <label for="remember-me" class="text-sm dark:text-white">我接受<a
                                                             class="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                                            href="#"> Insmont 隐私政策和协议</a></label>
+                                                            href="/privacy-policy"> Insmont 隐私政策和协议</a></label>
                                                 </div>
                                             </div>
                                             <!-- End Checkbox -->
