@@ -8,11 +8,10 @@
     <meta name="description" content=" insmont 是一个面向年轻用户的即时社交媒体平台，旨在帮助用户记录和分享生活中的重要时刻，捕捉和表达令人难忘的瞬间和情感。">
     <link rel="short icon" href="../assets/favicon.ico">
     <script src="../tailwindcss.js"></script>
-    <title>insmont 主页 | （＾∀＾●）ﾉｼ</title>
+    <title>insmont |</title>
 </head>
 
 <body>
-
     <div class="bg-gray-100 dark:bg-gray-800">
 
         <div id="havent-login-banner" tabindex="-1"
@@ -223,7 +222,7 @@
                                         </button>
 
                                         <div id="topDropDownButton"
-                                            class="transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-gray-800 dark:border dark:border-gray-700"
+                                            class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-gray-800 dark:border dark:border-gray-700"
                                             aria-labelledby="hs-dropdown-with-header">
                                             <div class="py-3 px-5 -m-2 bg-gray-100 rounded-t-lg dark:bg-gray-700">
                                                 <p class="text-sm text-gray-500 dark:text-gray-400">登录的账号为</p>
@@ -242,6 +241,17 @@
 
                                             </div>
                                             <div class="mt-2 py-2 first:pt-0 last:pb-0">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700"
+                                                    href="/home">
+                                                    <svg class="h-4 w-4" data-slot="icon" fill="none" stroke-width="1.5"
+                                                        stroke="currentColor" viewBox="0 0 24 24"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+                                                        </path>
+                                                    </svg>
+                                                    返回首页
+                                                </a>
                                                 <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:bg-gray-700"
                                                     href="/profile">
                                                     <svg data-slot="icon" class="h-4 w-4" fill="currentColor"
@@ -393,9 +403,21 @@
                             </svg>
 
                             <div class="flex" id="userVerification">
-                                <svg id="genderNan" class="hidden h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#74C0FC" d="M289.8 46.8c3.7-9 12.5-14.8 22.2-14.8H424c13.3 0 24 10.7 24 24V168c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-33.4-33.4L321 204.2c19.5 28.4 31 62.7 31 99.8c0 97.2-78.8 176-176 176S0 401.2 0 304s78.8-176 176-176c37 0 71.4 11.4 99.8 31l52.6-52.6L295 73c-6.9-6.9-8.9-17.2-5.2-26.2zM400 80l0 0h0v0zM176 416a112 112 0 1 0 0-224 112 112 0 1 0 0 224z"/></svg>
-                                <svg id="genderNv" class="hidden h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#B197FC" d="M80 176a112 112 0 1 1 224 0A112 112 0 1 1 80 176zM224 349.1c81.9-15 144-86.8 144-173.1C368 78.8 289.2 0 192 0S16 78.8 16 176c0 86.3 62.1 158.1 144 173.1V384H128c-17.7 0-32 14.3-32 32s14.3 32 32 32h32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V448h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H224V349.1z"/></svg>
-                                <svg id="genderWu" class="hidden h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#63E6BE" d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                                <svg id="genderNan" class="hidden h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path fill="#74C0FC"
+                                        d="M289.8 46.8c3.7-9 12.5-14.8 22.2-14.8H424c13.3 0 24 10.7 24 24V168c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-33.4-33.4L321 204.2c19.5 28.4 31 62.7 31 99.8c0 97.2-78.8 176-176 176S0 401.2 0 304s78.8-176 176-176c37 0 71.4 11.4 99.8 31l52.6-52.6L295 73c-6.9-6.9-8.9-17.2-5.2-26.2zM400 80l0 0h0v0zM176 416a112 112 0 1 0 0-224 112 112 0 1 0 0 224z" />
+                                </svg>
+                                <svg id="genderNv" class="hidden h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 384 512">
+                                    <path fill="#B197FC"
+                                        d="M80 176a112 112 0 1 1 224 0A112 112 0 1 1 80 176zM224 349.1c81.9-15 144-86.8 144-173.1C368 78.8 289.2 0 192 0S16 78.8 16 176c0 86.3 62.1 158.1 144 173.1V384H128c-17.7 0-32 14.3-32 32s14.3 32 32 32h32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V448h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H224V349.1z" />
+                                </svg>
+                                <svg id="genderWu" class="hidden h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path fill="#63E6BE"
+                                        d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+                                </svg>
                                 <span id="username" class="hidden font-bold text-xl pr-1 dark:text-white">user_id</span>
                             </div>
                             <div id="userLoadingName"
@@ -439,7 +461,39 @@
                                 <span class="text-gray-400">关注</span>
                             </div>
                         </div>
+
+                        <div class="text-center justify-center flex place-self-center mt-5 space-x-3 ">
+
+                            <div id="FollowButton"
+                                class="hidden cursor-pointer group [transform:translateZ(0)] px-6 py-3 rounded-lg overflow-hidden bg-gray-200 relative before:absolute before:bg-sky-600 before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500">
+                                <span
+                                    class="relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500">关注</span>
+                            </div>
+                            <div id="UnFollowButton"
+                                class="hidden cursor-pointer group [transform:translateZ(0)] px-6 py-3 rounded-lg overflow-hidden bg-gray-200 relative before:absolute before:bg-sky-600 before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500">
+                                <span
+                                    class="relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500">取消关注</span>
+                            </div>
+
+                            <button id="qrcode" data-hs-overlay="#hs-vertically-centered-modal"
+                                class=" text-black dark:text-white cursor-pointer flex items-center justify-center"
+                                type="button">
+                                <svg class="w-10 cursor-pointer" data-slot="icon" fill="none" stroke-width="1.5"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 3.75 9.375v-4.5ZM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 0 1-1.125-1.125v-4.5ZM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0 1 13.5 9.375v-4.5Z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6.75 6.75h.75v.75h-.75v-.75ZM6.75 16.5h.75v.75h-.75v-.75ZM16.5 6.75h.75v.75h-.75v-.75ZM13.5 13.5h.75v.75h-.75v-.75ZM13.5 19.5h.75v.75h-.75v-.75ZM19.5 13.5h.75v.75h-.75v-.75ZM19.5 19.5h.75v.75h-.75v-.75ZM16.5 16.5h.75v.75h-.75v-.75Z">
+                                    </path>
+                                </svg>
+                            </button>
+
+
+                        </div>
                     </div>
+
 
                     <div class="bg-white dark:bg-slate-900 shadow mt-6  rounded-lg p-6">
                         <h3 class="text-gray-600 dark:text-gray-300 text-sm font-semibold mb-4">正在关注</h3>
@@ -457,212 +511,73 @@
                     </div>
 
                 </aside>
+                <article id="postList">
 
-                <article class="">
-
-                    <form class="bg-white dark:bg-slate-900  shadow rounded-lg mb-6 p-4">
-                        <div
-                            class="mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
-                                <div class="flex flex-wrap items-center divide-gray-200 dark:divide-gray-600">
-                                    <div class="flex items-center sm:pe-4">
-                                        <button type="button" id="postUrlButton"
-                                            class=" p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                                            <svg class="w-5 h-5" data-slot="icon" fill="currentColor"
-                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true">
-                                                <path clip-rule="evenodd" fill-rule="evenodd"
-                                                    d="M11.914 4.086a2 2 0 0 0-2.828 0l-5 5a2 2 0 1 0 2.828 2.828l.556-.555a.75.75 0 0 1 1.06 1.06l-.555.556a3.5 3.5 0 0 1-4.95-4.95l5-5a3.5 3.5 0 0 1 4.95 4.95l-1.972 1.972a2.125 2.125 0 0 1-3.006-3.005L9.97 4.97a.75.75 0 1 1 1.06 1.06L9.058 8.003a.625.625 0 0 0 .884.883l1.972-1.972a2 2 0 0 0 0-2.828Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                        <button type="button" id="postLocationButton"
-                                            class="hs-tooltip-toggle p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                                            <svg class="w-5 h-5" data-slot="icon" fill="currentColor"
-                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true">
-                                                <path clip-rule="evenodd" fill-rule="evenodd"
-                                                    d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                        <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
-                                        <button type="button" id="postImageButton"
-                                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                                            <svg class="w-5 h-5" data-slot="icon" fill="currentColor"
-                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true">
-                                                <path clip-rule="evenodd" fill-rule="evenodd"
-                                                    d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm10.5 5.707a.5.5 0 0 0-.146-.353l-1-1a.5.5 0 0 0-.708 0L9.354 9.646a.5.5 0 0 1-.708 0L6.354 7.354a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0-.146.353V12a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V9.707ZM12 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                        <button type="button" id="postCalenderButton"
-                                            data-hs-overlay="#hs-focus-management-modal"
-                                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                                            <svg class="w-5 h-5" data-slot="icon" fill="currentColor"
-                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M5.75 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM5 10.25a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0ZM10.25 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM7.25 8.25a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0ZM8 9.5A.75.75 0 1 0 8 11a.75.75 0 0 0 0-1.5Z">
-                                                </path>
-                                                <path clip-rule="evenodd" fill-rule="evenodd"
-                                                    d="M4.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-5V1.75A.75.75 0 0 0 4.75 1ZM3.5 7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-
-                                        <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-gray-800 dark:border dark:border-gray-700"
-                                            aria-labelledby="hs-dropdown-item-checkbox">
-                                            <div
-                                                class="relative flex items-start py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <div class="flex items-center h-5 mt-1">
-                                                    <input id="hs-dropdown-item-checkbox-delete"
-                                                        name="hs-dropdown-item-checkbox-delete" type="checkbox"
-                                                        class="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                                                        aria-describedby="hs-dropdown-item-checkbox-delete-description"
-                                                        checked>
-                                                </div>
-                                                <label for="hs-dropdown-item-checkbox-delete" class="ms-3.5">
-                                                    <span
-                                                        class="block text-sm font-semibold text-gray-800 dark:text-gray-300">Delete</span>
-                                                    <span id="hs-dropdown-item-checkbox-delete-description"
-                                                        class="block text-sm text-gray-600 dark:text-gray-500">Notify me
-                                                        when this action happens.</span>
-                                                </label>
-                                            </div>
-                                            <div
-                                                class="relative flex items-start py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                <div class="flex items-center h-5 mt-1">
-                                                    <input id="hs-dropdown-item-checkbox-archive"
-                                                        name="hs-dropdown-item-checkbox-archive" type="checkbox"
-                                                        class="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                                                        aria-describedby="hs-dropdown-item-checkbox-archive-description">
-                                                </div>
-                                                <label for="hs-dropdown-item-checkbox-archive" class="ms-3.5">
-                                                    <span
-                                                        class="block text-sm font-semibold text-gray-800 dark:text-gray-300">Archive</span>
-                                                    <span id="hs-dropdown-item-checkbox-archive-description"
-                                                        class="block text-sm text-gray-600 dark:text-gray-500">Notify me
-                                                        when this action happens.</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="hs-dropdown relative">
-                                            <button type="button" id="postSettingButton"
-                                                class="hs-dropdown-toggle p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                                                <svg class="w-5 h-5" data-slot="icon" fill="currentColor"
-                                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                                                    aria-hidden="true">
-                                                    <path
-                                                        d="M7.25 13.25V7.5h1.5v5.75a.75.75 0 0 1-1.5 0ZM8.75 2.75V5h.75a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5h.75V2.75a.75.75 0 0 1 1.5 0ZM2.25 9.5a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5H4.5V2.75a.75.75 0 0 0-1.5 0V9.5h-.75ZM10 10.25a.75.75 0 0 1 .75-.75h.75V2.75a.75.75 0 0 1 1.5 0V9.5h.75a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75ZM3 12v1.25a.75.75 0 0 0 1.5 0V12H3ZM11.5 13.25V12H13v1.25a.75.75 0 0 1-1.5 0Z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-
-                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 mt-2 dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                                                aria-labelledby="hs-dropdown-default">
-                                                <div class="gap-x-3.5 py-2 px-3 gap-y-2">
-                                                    <span
-                                                        class="flex items-center text-lg rounded-lg font-bold text-gray-800  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                                                        帖子设置
-                                                    </span>
-                                                    <div class="flex justify-between mt-2">
-                                                        <label for="hs-tooltip-example" class="font-medium text-gray-500 ms-3 dark:text-gray-400">
-                                                            公开帖子
-                                                        </label>
-                                                        <input type="checkbox" id="allowedPostPublic" checked="checked"
-                                                            class="hs-tooltip-toggle relative w-[3.25rem] h-7 p-px bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-blue-600 checked:border-blue-600 focus:checked:border-blue-600 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-600 before:inline-block before:size-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-gray-400 dark:checked:before:bg-blue-200">
-                                                    </div>
-                                                    <div class="flex justify-between mt-2">
-                                                        <label for="hs-tooltip-example" class="font-medium text-gray-500 ms-3 dark:text-gray-400">
-                                                            允许评论
-                                                        </label>
-                                                        <input type="checkbox" id="allowedPostComment" checked="checked"
-                                                            class="hs-tooltip-toggle relative w-[3.25rem] h-7 p-px bg-gray-100 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-blue-600 checked:border-blue-600 focus:checked:border-blue-600 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-600 before:inline-block before:size-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-gray-400 dark:checked:before:bg-blue-200">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- Popover -->
-                                        <span
-                                            class="hs-tooltip-toggle hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-3 px-4 bg-white border text-sm text-gray-600 rounded-lg shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400"
-                                            role="tooltip">
-                                            该功能正在火速开发...
-                                        </span>
-                                        <!-- End Popover -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="px-4 py-2 bg-white rounded-
-                            b-lg dark:bg-gray-800">
-                                <textarea id="editor" rows="8"
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    placeholder="分享你的精彩时刻..."></textarea>
-                            </div>
-                        </div>
-
-
-                        <div id="previewContainer" class="w-full gap-x-3 flex mx-2 mr-6 pr-2 mb-4 overflow-x-auto overflow-hidden [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500">
-                            <div class="relative hidden">
-                                <img class="w-16 h-auto relative rounded-lg object-cover" onload="setDeleteIconColor(this)">
-                                <svg id="deleteIcon" class="w-5 h-5 dark:text-white cursor-pointer absolute top-2 left-10 inset-inline-end-2 z-10" data-slot="icon" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm2.78-4.22a.75.75 0 0 1-1.06 0L8 9.06l-1.72 1.72a.75.75 0 1 1-1.06-1.06L6.94 8 5.22 6.28a.75.75 0 0 1 1.06-1.06L8 6.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L9.06 8l1.72 1.72a.75.75 0 0 1 0 1.06Z"></path>
+                    <div class="bg-white shadow rounded-lg mb-6 dark:bg-slate-900">
+                        <div class="flex flex-row px-2 py-3 mx-3">
+                            <div class="w-auto h-auto rounded-full">
+                                <svg class="w-12 h-12 animate-pulse text-gray-200 dark:text-gray-700 me-4"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
                                 </svg>
                             </div>
-                        </div>
-
-                        <button type="button" id="postButton" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                            发&nbsp;送
-                        </button>
-                    </form>
-
-                    
-
-                    <div class="bg-white dark:bg-slate-900 shadow rounded-lg">
-                        <div class="flex flex-row px-2 py-3 mx-3">
-                            <div class="w-auto h-auto rounded-full border-2 border-green-500">
-                                <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="User avatar"
-                                    src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=200">
-                            </div>
                             <div class="flex flex-col mb-2 ml-4 mt-1">
-                                <div class="text-gray-600 text-sm font-semibold">Sara Lauren</div>
+                                <div class="text-gray-600 dark:text-gray-200 text-sm font-semibold">用户昵称</div>
                                 <div class="flex w-full mt-1">
-                                    <div class="text-blue-700 font-base text-xs mr-1 cursor-pointer">
-                                        UX Design
+                                    <div class="text-blue-700 dark:text-gray-400 font-base text-xs mr-1 cursor-pointer">
+                                        <span>IP&nbsp;属地：</span>
+                                        <span id="post_location">地区名称</span>
                                     </div>
                                     <div class="text-gray-400 font-thin text-xs">
-                                        • 1 day ago
+                                        <span>•</span>
+                                        <span id="cal_time">计算时间</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="border-b border-gray-100"></div>
+                        <div class="border-b border-gray-100 dark:border-gray-600"></div>
                         <div class="text-gray-400 font-medium text-sm mb-7 mt-6 mx-3 px-2">
-                            <svg class="rounded w-full text-gray-200 dark:text-gray-600" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                                <path
-                                    d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                            </svg>
+                            <div class="grid grid-cols-6 col-span-2 gap-2">
+                                <div class="overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+                                    <img src="" class="h-full w-full object-cover">
+                                </div>
+                                <div class="overflow-hidden rounded-xl col-span-3 max-h-[14rem]">
+                                    <img src="" class="h-full w-full object-cover">
+                                </div>
+                                <div class="overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+                                    <img src="" class="h-full w-full object-cover">
+                                </div>
+                                <div class="overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+                                    <img src="" class="h-full w-full object-cover">
+                                </div>
+                                <div class="overflow-hidden rounded-xl col-span-2 max-h-[10rem]">
+                                    <img src="" class="h-full w-full object-cover">
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-gray-600 font-semibold  mb-2 mx-3 px-2">Dummy text of the printing and
-                            typesetting
-                            industry</div>
-                        <div class="text-gray-500 text-sm mb-6 mx-3 px-2">Lorem Ipsum is simply dummy text of the
-                            printing
-                            and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                            the
-                            1500</div>
-                        <div class="flex justify-start mb-4 border-t border-gray-100">
+                        <div class="text-gray-500 dark:text-gray-200 text-sm mb-6 mx-3 px-2" id="post_content">
+                            文本内容
+                        </div>
+                        <div class="flex justify-start mb-4 border-t border-gray-100 dark:border-gray-600">
                             <div class="flex w-full mt-1 pt-2 pl-5">
-                                <span
-                                    class="bg-white transition ease-out duration-300 hover:text-red-500 border w-8 h-8 px-2 pt-2 text-center rounded-full text-gray-400 cursor-pointer mr-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14px" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                                <span id="unlikedButton"
+                                    class="hidden transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 hover:dark:bg-gray-400 dark:bg-gray-500 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer">
+                                    <svg class="h-4 w-4 dark:text-gray-200 text-red-500" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span id="likedButton"
+                                    class="hidden transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 hover:dark:bg-gray-400 dark:bg-gray-500 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer">
+                                    <svg class="h-4 w-4 text-red-500" fill="red" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                                        </path>
                                     </svg>
                                 </span>
                                 <img class="inline-block object-cover w-8 h-8 text-white border-2 border-white rounded-full shadow-sm cursor-pointer"
@@ -679,8 +594,8 @@
                                     alt="">
                             </div>
                             <div class="flex justify-end w-full mt-1 pt-2 pr-5">
-                                <span
-                                    class="transition ease-out duration-300 hover:bg-blue-50 bg-blue-100 w-8 h-8 px-2 py-2 text-center rounded-full text-blue-400 cursor-pointer mr-2">
+                                <span id="post_share"
+                                    class="transition ease-out duration-300 dark:text-gray-200 hover:bg-blue-50 bg-blue-100 hover:dark:bg-gray-400 dark:bg-gray-500 w-8 h-8 px-2 py-2 text-center rounded-full text-blue-400 cursor-pointer mr-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="14px" viewBox="0 0 24 24"
                                         stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -688,58 +603,52 @@
                                         </path>
                                     </svg>
                                 </span>
-                                <span
-                                    class="transition ease-out duration-300 hover:bg-gray-50 bg-gray-100 h-8 px-2 py-2 text-center rounded-full text-gray-100 cursor-pointer">
-                                    <svg class="h-4 w-4 text-red-500" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
-                                        </path>
-                                    </svg>
-                                </span>
                             </div>
                         </div>
-                        <div class="flex w-full border-t border-gray-100">
-                            <div class="mt-3 mx-5 flex flex-row text-xs">
-                                <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Comments:
-                                    <div class="ml-1 text-gray-400 text-ms"> 30</div>
-                                </div>
-                                <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Views:
-                                    <div class="ml-1 text-gray-400 text-ms"> 60k</div>
+                        <div class="flex w-full border-t border-gray-100 dark:border-gray-600">
+                            <div class="mt-3 mx-5 w-full flex justify-start text-xs">
+                                <div class="flex text-gray-700 dark:text-gray-200 font-normal rounded-md mb-2 mr-4 items-center">
+                                    评论：
+                                    <div id="post_comments_number" class="ml-1 text-gray-400 text-ms">评论数量</div>
                                 </div>
                             </div>
                             <div class="mt-3 mx-5 w-full flex justify-end text-xs">
-                                <div class="flex text-gray-700  rounded-md mb-2 mr-4 items-center">Likes: <div
-                                        class="ml-1 text-gray-400 text-ms"> 120k</div>
+                                <div class="flex text-gray-700 dark:text-gray-200  rounded-md mb-2 mr-4 items-center">
+                                    喜欢：
+                                    <div class="ml-1 text-gray-400  text-ms">点赞数量</div>
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
+                        <div class="text-black p-4 antialiased flex">
+                            <img class="rounded-full h-8 w-8 mr-2 mt-1 " src="https://picsum.photos/id/1027/200/200">
+                            <div>
+                                <div class="bg-gray-100 dark:bg-gray-600 rounded-lg px-4 pt-2 pb-2.5">
+                                    <div class="font-semibold dark:text-white text-sm leading-relaxed">评论者</div>
+                                    <div class="text-xs dark:text-white leading-snug md:leading-normal">
+                                        评论内容 这段内容应该很长很长很长。。。。。。。。。。。。。。。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
                             <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer"
                                 alt="User avatar"
                                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80">
                             <span class="absolute inset-y-0 right-0 flex items-center pr-6">
-                                <button type="submit"
+                                <button id="commentButton" type="button"
                                     class="p-1 focus:outline-none focus:shadow-none hover:text-blue-500">
-                                    <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                                        </path>
+                                    <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"></path>
                                     </svg>
-
                                 </button>
                             </span>
                             <input type="search"
-                                class="w-full py-2 pl-4 pr-10 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:text-gray-900 focus:shadow-outline-blue"
-                                style="border-radius: 25px" placeholder="Post a comment..." autocomplete="off">
+                                class="w-full py-2 pl-4 pr-10 text-sm bg-gray-100 dark:bg-gray-500 dark:text-gray-200 border border-transparent appearance-none rounded-tg placeholder-gray-400"
+                                style="border-radius: 25px" placeholder="评论一下吧" autocomplete="off">
                         </div>
                     </div>
 
                 </article>
-
             </main>
 
         </div>
@@ -756,7 +665,8 @@
                     <p class="text-gray-500">We're part of the <a
                             class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
                             href="https://github.com/insmont">Insmont</a> family.</p>
-                    <p class="text-gray-500">© 2023 - <span id="year">Present</span> Insmont. All rights reserved.</p>
+                    <p class="text-gray-500">© 2023 - <span id="year">Present</span> Insmont. All rights reserved.
+                    </p>
                 </div>
 
                 <div>
@@ -778,53 +688,6 @@
                 <!-- End Social Brands -->
             </div>
         </footer>
-    </div>
-
-
-
-    <div id="hs-focus-management-modal"
-        class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none">
-        <div
-            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
-            <div
-                class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-                <div class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
-                    <h3 class="font-bold text-gray-800 dark:text-white">
-                        定时发送
-                    </h3>
-                    <button type="button"
-                        class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        data-hs-overlay="#hs-focus-management-modal">
-                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 6 6 18" />
-                            <path d="m6 6 12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="p-4 overflow-y-auto">
-                    <label for="datetime" class="block text-sm font-medium text-gray-700 dark:text-gray-200">选择日期和时间</label>
-                    <div class="flex items-center mt-2">
-                        <input type="datetime-local" id="datetime" lang="zh-CN"
-                            class="block w-full border-gray-300 rounded-md shadow-sm
-                            dark:bg-gray-800 dark:border-gray-700 dark:text-white cursor-pointer
-                            focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
-                    </div>
-                </div>
-                <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
-                    <button type="button" id="closeBtn"
-                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        data-hs-overlay="#hs-focus-management-modal">
-                        关闭
-                    </button>
-                    <button type="button" id="scheduleBtn"
-                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                        保存更改
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div id="loadingDialog"
@@ -871,6 +734,26 @@
         </div>
     </div>
 
-</body>
+    <div id="hs-vertically-centered-modal"
+        class="hs-overlay hidden fixed inset-0 z-[80] flex items-center justify-center pointer-events-none">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 opacity-0 transition-opacity duration-300 transform center-align pointer-events-auto">
+            <div class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-4">
+                <div class="flex justify-between items-center border-b dark:border-gray-700">
+                    <a class="hidden" id="qrcodeUrl"></a>
+                    <img id="qrcodePicture" class="h-32 w-32 items-center justify-center" loading="lazy" src="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageDialog" class="hidden fixed top-0 left-0 z-50 w-screen h-screen bg-black bg-opacity-70 flex justify-center items-center">
+        <svg id="closeImageDialog" class="cursor-pointer fixed z-50 top-6 right-8 w-10 h-10 text-white dark:text-gray-300" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+        </svg>
+    
+        <!-- A big image will be displayed here -->
+        <img id="imageDialogImage" class="max-w-full max-h-full object-contain" />
+    </div>
 
 </html>

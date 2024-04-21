@@ -71,7 +71,7 @@ module.exports = {
       template: "./src/pages/index.html",
       filename: "index.html",
       chunks: ["index"],
-  }),
+  }), 
   ...glob.sync("./src/pages/*/index.html").map((path) => {
       const folderName = path.replace(/^\.\/src\/pages\/(.*)\/index.html$/, "$1");
       return new HtmlWebpackPlugin({

@@ -35,7 +35,8 @@
             <div class="flex flex-col items-center w-full pt-5 pr-4 pb-10 pl-4 lg:pt-10 lg:flex-row">
                 <div class="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
                     <div class="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
-                        <img src="../assets/insmont_version_1.svg" alt="insmont" class="w-24 h-24 md:w-72 md:h-72 mb-3 cursor-pointer" onclick="window.location.href='/'" />
+                        <img src="../assets/insmont_version_1.svg" alt="insmont"
+                            class="w-24 h-24 md:w-72 md:h-72 mb-3 cursor-pointer" onclick="window.location.href='/'" />
                     </div>
                 </div>
                 <div class="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
@@ -55,20 +56,19 @@
                                 </div>
 
                                 <div class="mt-5">
-                                    <!-- Form -->
-                                    <form>
                                         <div class="grid gap-y-4">
                                             <!-- Form Group -->
                                             <div>
-                                                <label for="email"  class="block text-sm mb-2 dark:text-white">
+                                                <label for="email" class="block text-sm mb-2 dark:text-white">
                                                     手机号或邮箱
                                                 </label>
-                                                <div class="relative">
-                                                    <input type="text" id="registerAccount"  placeholder="输入您的手机号或邮箱"
-                                                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                                                        required aria-describedby="email-error">
-                                                    <div
-                                                        class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                                                <div class="relative flex">
+                                                    <input autofocus type="text" id="registerAccount"
+                                                        style="border: 1px solid #e2e8f0;" placeholder="输入您的手机号或邮箱"
+                                                        class="py-3 px-4 block w-full border-gray-200  rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                                        required>
+                                                    <div id="accountWarning"
+                                                        class="hidden absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none pe-3">
                                                         <svg class="size-5 text-red-500" width="16" height="16"
                                                             fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                                                             <path
@@ -76,8 +76,6 @@
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <p class="hidden text-xs text-red-600 mt-2" id="email-error">Please
-                                                    include a valid email address so we can get back to you</p>
                                             </div>
                                             <!-- End Form Group -->
 
@@ -258,7 +256,8 @@
                                                 <label for="confirm-password"
                                                     class="block text-sm mb-2 dark:text-white">确定密码</label>
                                                 <div class="relative">
-                                                    <input type="password" id="confirm-password" name="confirm-password" placeholder="再次输入密码"
+                                                    <input type="password" id="confirm-password" name="confirm-password"
+                                                        placeholder="再次输入密码"
                                                         class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                                                         required aria-describedby="confirm-password-error">
                                                     <div
@@ -278,8 +277,11 @@
                                             <!-- Checkbox -->
                                             <div class="flex items-center">
                                                 <div class="flex mr-1">
-                                                    <input id="remember-me" name="remember-me" type="checkbox"
-                                                        class="shrink-0 mt-0.5 border-gray-200 cursor-pointer rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                                                    <input id="remember-me"  type="checkbox"
+                                                        class="shrink-0 mt-0.5 border-gray-200 cursor-pointer rounded text-blue-600 
+                                                        focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 
+                                                        dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                                                    >
                                                 </div>
                                                 <div class="ms-3 ml-1">
                                                     <label for="remember-me" class="text-sm dark:text-white">我接受<a
@@ -289,14 +291,12 @@
                                             </div>
                                             <!-- End Checkbox -->
 
-                                            <button type="submit"
-                                                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white
-                                                    hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                                    注&nbsp;册
-                                                    </button>
+                                            <button id="registerButton" data-hs-overlay="#verifyAccount"
+                                                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white
+                                                pointer-events-none bg-gray-300 dark:bg-slate-500">
+                                                注&nbsp;册
+                                            </button>
                                         </div>
-                                    </form>
-                                    <!-- End Form -->
                                 </div>
                             </div>
                         </div>
@@ -514,6 +514,130 @@
                 rights reserved.&nbsp;<a href="https://beian.miit.gov.cn" target="_blank"> 苏ICP备20015498号-3</a></div>
 
         </footer>
+    </div>
+
+
+    <div id="verifyAccount"
+        class="hs-overlay hidden size-full fixed items-center justify-center top-0 start-0 z-[20] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800">
+                <div class="p-5 sm:pt-14 sm:pl-14 sm:pr-14 sm:pb-8 text-center overflow-y-auto">
+
+                    <img src="../assets/insmont_version_1.svg" alt="insmont" class="w-10 h-10 md:w-14 md:h-14 mb-8">
+
+                    <h3 class="mb-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
+                        验证身份
+                    </h3>
+                    <p class="text-gray-500">
+                        为了确保您提供的手机号或邮箱有效并验证您的身份，insmont 会给您发送一组验证码。<a target="_blank" href="privacy-policy.html"
+                            class="font-medium text-blue-600 hover:underline dark:text-blue-500">了解详情</a>
+                    </p>
+                </div>
+
+
+                <div class="px-6 md:px-16 mt-6 mb-16 ">
+
+                    <label
+                        class="block mb-4 text-sm font-medium text-gray-900 dark:text-white">请确认您的手机号或电子邮箱以接收验证码</label>
+                    <div class="flex">
+                        <input type="text" id="verifyAccountInput" aria-describedby="helper-text-explanation" disabled
+                            class="pointer-events-none opacity-50 disa mr-4 bg-gray-50 border border-gray-700 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="name@insmont.org 或 1xx-xxxx-xxxx">
+                        <button type="button" id="verifyAccountSendCodeButton"
+                            class="inline-flex items-center justify-center px-7 py-1 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            style="width: 100px; height: 40px;">
+                            <span id="SendCodeText"
+                                class="items-center flex justify-center text-xs font-semibold text-white">
+                                发&nbsp;送
+                            </span>
+                            <span id="CountNumber"
+                                class="hidden items-center justify-center ms-2 text-xl font-semibold text-white">
+                                60
+                            </span>
+                        </button>
+                    </div>
+                    <label class="block mb-4 text-sm mt-8 font-medium text-gray-900 dark:text-white">输入验证码：</label>
+                    <div class="flex space-x-3 justify-evenly  mx-auto" data-hs-pin-input id="VerifyAccountCodeArray">
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                        <input type="number"
+                            class="block size-[46px] text-center bg-gray-50 border border-gray-600 rounded-md text-sm [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            data-hs-pin-input-item>
+                    </div>
+
+                    <p id="helper-text-explanation" class="mt-5 text-sm text-gray-500 dark:text-gray-400">Insmont
+                        不会以任何方式泄露您的账户信息，有效期5分钟</p>
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button type="button" onclick="return false;" id="VerifyAccountButton" class="h-16 rounded-b-xl w-full py-3 px-4 inline-flex justify-center 
+                        items-center gap-x-2 text-sm font-semibold rounded-ee-xl border border-transparent
+                        pointer-events-none bg-gray-300 text-gray-600 dark:bg-slate-500 dark:text-gray-300">
+                        <span class="text-xl">验&nbsp;&nbsp;证</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingDialog"
+        class="hs-overlay hidden fixed inset-0 z-[25] flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800 max-w-md mx-auto">
+            <div
+                class="flex items-center justify-center w-32 h-32 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                <div role="status">
+                    <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                            fill="currentColor" />
+                        <path
+                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                            fill="currentFill" />
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="hs-subscription-with-image"
+        class="hs-overlay hidden fixed inset-0 z-[80] flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-gray-800 w-full max-w-md mx-auto">
+
+            <div class="p-4 sm:p-10 text-center overflow-y-auto">
+                <h3 id="topTitle" class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">
+                    通知标题
+                </h3>
+                <p id="contentView" class="text-gray-500">
+                    通知内容
+                </p>
+
+                <div class="mt-6 flex justify-center gap-x-4">
+                    <button type="button"
+                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        data-hs-overlay="#hs-subscription-with-image">
+                        明白
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

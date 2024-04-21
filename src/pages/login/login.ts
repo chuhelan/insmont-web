@@ -113,7 +113,7 @@ function loginRequest(user: User): void {
     formData.append("password", encryptPassword(user.password));
 
     axios.post("http://localhost:2077/v1/login", formData, {
-        timeout: 5000,
+        timeout: 10000,
         cancelToken: source.token
     })
         .then(response => {
@@ -167,8 +167,8 @@ interface Cookies {
 function writeCookie(savedCookies: Cookies): void {
     const exp = new Date();
     exp.setTime(exp.getTime() + 14 * 24 * 60 * 60 * 1000);
-    document.cookie = "uid=" + savedCookies.uid + ";expires=" + exp.toUTCString();
-    document.cookie = "token=" + savedCookies.token + ";expires=" + exp.toUTCString();
+    document.cookie = `uid=${savedCookies.uid}; expires=${exp.toUTCString()}; path=/`;
+    document.cookie = `token=${savedCookies.token}; expires=${exp.toUTCString()}; path=/`;
 }
 
 function open2faDialog(key: string): void {
@@ -261,7 +261,7 @@ function keyCodeRequest(): void {
     }
 
     axios.post(url, formData, {
-        timeout: 5000,
+        timeout: 10000,
         cancelToken: source.token
     })
         .then(response => {
@@ -282,7 +282,7 @@ function verificationAccount(key: string, code: string): void {
     formData.append("key", key);
     formData.append("code", code);
     axios.post("http://localhost:2077/v1/login/2fa", formData, {
-        timeout: 5000,
+        timeout: 10000,
         cancelToken: source.token
     })
         .then(response => {
@@ -356,7 +356,7 @@ async function verifyToken(uid: string, token: string): Promise<boolean> {
 
     try {
         const response = await axios.post("http://localhost:2077/v1/user/verify", requestData, {
-            timeout: 5000,
+            timeout: 10000,
             cancelToken: source.token
         });
         if (response.data.code === 200) {
@@ -492,7 +492,7 @@ function __keyCodeRequest(key: string): void {
     }
 
     axios.post(url, formData, {
-        timeout: 5000,
+        timeout: 10000,
         cancelToken: source.token
     })
         .then(response => {

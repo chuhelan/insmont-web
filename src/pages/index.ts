@@ -7,8 +7,8 @@ function getFullYear() {
 
 export function enableDarkMode(){
     if (
-        localStorage.getItem('color-theme') === 'dark' ||
-        (!('color-theme' in localStorage) &&
+        localStorage.getItem('hs_theme') === 'dark' ||
+        (!('hs_theme' in localStorage) &&
             window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
         document.documentElement.classList.add('dark');
@@ -22,8 +22,8 @@ export function enableDarkMode(){
 
     // Change the icons inside the button based on previous settings
     if (
-        localStorage.getItem('color-theme') === 'dark' ||
-        (!('color-theme' in localStorage) &&
+        localStorage.getItem('hs_theme') === 'dark' ||
+        (!('hs_theme' in localStorage) &&
             window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
         themeToggleLightIcon.classList.remove('hidden');
@@ -39,22 +39,22 @@ export function enableDarkMode(){
         themeToggleLightIcon.classList.toggle('hidden');
 
         // if set via local storage previously
-        if (localStorage.getItem('color-theme')) {
-            if (localStorage.getItem('color-theme') === 'light') {
+        if (localStorage.getItem('hs_theme')) {
+            if (localStorage.getItem('hs_theme') === 'light') {
                 document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
+                localStorage.setItem('hs_theme', 'dark');
             } else {
                 document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
+                localStorage.setItem('hs_theme', 'light');
             }
         } else {
             // if NOT set via local storage previously
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
+                localStorage.setItem('hs_theme', 'light');
             } else {
                 document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
+                localStorage.setItem('hs_theme', 'dark');
             }
         }
     });
@@ -78,8 +78,8 @@ function subscribe(): void {
 
     const formData = new FormData();
     formData.append("email", input.value);
-    axios.post("https://api.insmont.org.cn/v1/subscribe", formData, {
-        timeout: 5000,
+    axios.post("http://localhost:2077/v1/subscribe", formData, {
+        timeout: 10000,
         cancelToken: source.token
     })
         .then(response => {

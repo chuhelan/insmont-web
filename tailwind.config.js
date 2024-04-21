@@ -2,7 +2,7 @@ module.exports = {
   content: [
     "./src/**/*.html", 
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite/**/*.js",
+    "node_modules/flowbite/**/*.js",
     'node_modules/preline/dist/*.js',
   ],
   darkMode: "class",
