@@ -392,24 +392,31 @@ postButton.addEventListener('click', async () => {
     const allowedPostPublic = document.getElementById('allowedPostPublic') as HTMLInputElement;
     const allowedPostComment = document.getElementById('allowedPostComment') as HTMLInputElement;
 
-    const datetime:string = apiTime;
-    const content:string = textArea.value;
-    const visibility:string = allowedPostPublic.checked ? 'true' : 'false';
+    const datetime: string = apiTime;
+    let content: string = textArea.value;
+    const visibility: string = allowedPostPublic.checked ? 'true' : 'false';
     const comment_permission: number = allowedPostComment.checked ? 1 : 0;
-    const images: File[] = uploadImage;
+    let images: File[] = uploadImage;
     const id = getCookieValue("uid");
 
-    if (content.trim() === '') {
+    if (content.trim() === '' && images.length === 0) {
         showDialog("注意", "内容不能为空");
+        removeLoadingDialog();
         return;
     }
 
-    
+    // 将文本中的换行符替换为 <br> 标签
+    let contentWithLineBreaks = content.replace(/\n/g, '<br>');
 
-    if(verifyToken(id,getCookieValue("token"))){
+    // 如果内容为空，并且上传了图片，则将内容设置为 "分享图片"
+    if (contentWithLineBreaks.trim() === '' && images.length !== 0) {
+        contentWithLineBreaks = "分享图片";
+    }
+
+    if (verifyToken(id, getCookieValue("token"))) {
         const formData = new FormData();
         formData.append('id', id);
-        formData.append('content', content);
+        formData.append('content', contentWithLineBreaks);
         formData.append('visibility', visibility);
         formData.append('comment_permission', comment_permission.toString());
         formData.append('datetime', datetime);
@@ -437,12 +444,14 @@ postButton.addEventListener('click', async () => {
         } else {
             showDialog("发布失败", "请检查网络连接是否正常");
         }
-    }else{
+    } else {
         showDialog("登录状态已过期", "请重新登录");
         return;
     }
 
 });
+
+
 
 function CookieOrBroswerIdSelecter(): string {
     const cookieid = getCookieValue("uid");
